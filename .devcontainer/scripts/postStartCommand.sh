@@ -2,11 +2,6 @@
 
 set -ex
 
-install_conan() {
-    # cope with python3's pip error: externally-managed-environment on creating venv
-    pipx install conan
-}
-
 # helper to adjust concrete compiler to be used
 conan_buildenv_conf()
 {
