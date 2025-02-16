@@ -10,7 +10,7 @@ coverage() {
 
 sanitize() {
     cmake --preset=ci-sanitize -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-    cmake --build build/sanitize/ --config Debug
+    cmake --build build/sanitize -j 2
     (cd build/sanitize && ctest --output-on-failure --no-tests=error -j 2)
 }
 
